@@ -1,0 +1,7 @@
+// Vitest Snapshot v1
+
+exports[`<Button /> > should render in primary colour and medium size by default 1`] = `
+<button>
+  Hello
+</button>
+`;
