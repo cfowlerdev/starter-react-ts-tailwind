@@ -18,19 +18,19 @@ export const DefaultLayout: React.FC<IProps> = () => {
       <Navbar />
       <Aside>
         <AsideMenu>
-          <AsideMenuItem to="/dashboard">
+          <AsideMenuItem to="/dashboard" label="Dashboard">
             <RectangleGroupIcon className="h-6 w-6" />
           </AsideMenuItem>
-          <AsideMenuItem to="/typography">
+          <AsideMenuItem to="/typography" label="Typography">
             <PencilIcon className="h-6 w-6" />
           </AsideMenuItem>
-          <AsideMenuItem to="/components">
+          <AsideMenuItem to="/components" label="Components">
             <PuzzlePieceIcon className="h-6 w-6" />
           </AsideMenuItem>
-          <AsideMenuItem to="/tables">
+          <AsideMenuItem to="/tables" label="Tables">
             <TableCellsIcon className="h-6 w-6" />
           </AsideMenuItem>
-          <AsideMenuItem to="/alerts">
+          <AsideMenuItem to="/alerts" label="Alerts">
             <BellAlertIcon className="h-6 w-6" />
           </AsideMenuItem>
         </AsideMenu>
