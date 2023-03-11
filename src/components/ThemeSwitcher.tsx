@@ -26,5 +26,5 @@ export const ThemeSwitcher: React.FC<IProps> = () => {
     }
   }, [theme]);
 
-  return <Toggle label="Darkmode" />;
+  return <div />;
 };

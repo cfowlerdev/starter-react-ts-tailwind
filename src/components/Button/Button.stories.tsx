@@ -9,7 +9,7 @@ export default {
   argTypes: {}
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args}>Button</Button>;
 
-export const Standard = Template.bind({});
-Standard.args = {};
+export const Solid = Template.bind({});
+Solid.args = {};

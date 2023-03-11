@@ -5,6 +5,7 @@ import { ThemeSwitcher } from '../components/ThemeSwitcher';
 import { Menu, MenuItem } from '../components/Menu';
 import { Outlet } from '@tanstack/react-router';
 import { Toggle } from '../components/Toggle';
+import { Button } from '../components/Button';
 
 interface IProps {}
 
@@ -19,8 +20,7 @@ export const DefaultLayout: React.FC<IProps> = () => {
         </Menu>
         <ThemeSwitcher />
       </Aside>
-      <div className="p-4 sm:ml-20">
-        <Toggle label="Small toggle" />
+      <div className="flex p-4 dark:bg-black sm:ml-20">
         <Outlet />
       </div>
     </div>
