@@ -1,5 +1,12 @@
 import React from 'react';
-import { Aside } from '../components/Aside';
+import {
+  RectangleGroupIcon,
+  PencilIcon,
+  PuzzlePieceIcon,
+  TableCellsIcon,
+  BellAlertIcon
+} from '@heroicons/react/24/outline';
+import { Aside, AsideMenu, AsideMenuItem } from '../components/Aside';
 import { Main } from '../components/Main';
 import { Navbar } from '../components/Navbar';
 
@@ -10,12 +17,23 @@ export const DefaultLayout: React.FC<IProps> = () => {
     <div>
       <Navbar />
       <Aside>
-        <ul>
-          <li>Menu item 1</li>
-          <li>Menu item 2</li>
-          <li>Menu item 3</li>
-          <li>Menu item 4</li>
-        </ul>
+        <AsideMenu>
+          <AsideMenuItem to="/dashboard">
+            <RectangleGroupIcon className="h-6 w-6" />
+          </AsideMenuItem>
+          <AsideMenuItem to="/typography">
+            <PencilIcon className="h-6 w-6" />
+          </AsideMenuItem>
+          <AsideMenuItem to="/components">
+            <PuzzlePieceIcon className="h-6 w-6" />
+          </AsideMenuItem>
+          <AsideMenuItem to="/tables">
+            <TableCellsIcon className="h-6 w-6" />
+          </AsideMenuItem>
+          <AsideMenuItem to="/alerts">
+            <BellAlertIcon className="h-6 w-6" />
+          </AsideMenuItem>
+        </AsideMenu>
       </Aside>
       <Main>
         <p>
