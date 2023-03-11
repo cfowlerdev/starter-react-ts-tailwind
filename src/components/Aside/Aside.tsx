@@ -5,12 +5,5 @@ interface IProps {
 }
 
 export const Aside: React.FC<IProps> = ({ children }) => {
-  return (
-    <aside
-      className="fixed top-0 left-0 z-40 h-screen w-20 -translate-x-full text-gray-700 transition-transform
-      dark:bg-darkmode-surface dark:text-darkmode-surfaceText sm:translate-x-0"
-    >
-      {children}
-    </aside>
-  );
+  return <aside className="fixed top-16 left-0 h-screen w-16 bg-yellow-500">{children}</aside>;
 };
