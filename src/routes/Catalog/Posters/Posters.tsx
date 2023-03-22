@@ -2,10 +2,10 @@ import React from 'react';
 
 interface IProps {}
 
-export const Dashboard: React.FC<IProps> = () => {
+export const Posters: React.FC<IProps> = () => {
   return (
     <div>
-      <h1>Dashboard</h1>
+      <h1>Posters</h1>
     </div>
   );
 };
