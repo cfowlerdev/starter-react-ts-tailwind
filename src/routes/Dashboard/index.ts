@@ -1,9 +1,11 @@
-import { Route } from '@tanstack/react-router';
-import { rootRoute } from '../rootRoute';
-import { Dashboard } from './Dashboard';
+import React from 'react';
+import { IModule } from '../../core';
 
-export const dashboardRoute = new Route({
-  getParentRoute: () => rootRoute,
+const dashboardModule: IModule = {
+  label: 'Dashboard',
+  icon: 'RectangleGroupIcon',
   path: 'dashboard',
-  component: Dashboard
-});
+  component: React.lazy(() => import('./Dashboard').then(({ Dashboard }) => ({ default: Dashboard })))
+};
+
+export default dashboardModule;

@@ -1,7 +1,24 @@
-import { Route } from '@tanstack/react-router';
-import { rootRoute } from '../rootRoute';
+import React from 'react';
+import { IModule } from '../../core';
 
-export const catalogRoute = new Route({
-  getParentRoute: () => rootRoute,
-  path: 'catalog'
-});
+const catalogModule: IModule = {
+  label: 'Catalog',
+  icon: 'RectangleGroupIcon',
+  path: 'catalog',
+  children: [
+    {
+      label: 'Posters',
+      path: 'posters',
+      component: React.lazy(() => import('./Posters').then(({ Posters }) => ({ default: Posters }))),
+      priority: 1
+    },
+    {
+      label: 'Categories',
+      path: 'categories',
+      component: React.lazy(() => import('./Categories').then(({ Categories }) => ({ default: Categories }))),
+      priority: 2
+    }
+  ]
+};
+
+export default catalogModule;
